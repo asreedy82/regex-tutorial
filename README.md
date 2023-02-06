@@ -16,7 +16,7 @@ Visit the link below. You can view the tutorial and click on links within the ta
 
 The application is designed to help others who are interested in learning how to use regular expressions by explaining each component of a regex using an example.
 
-![Screen shot of Gist]()
+![Screen shot of Gist](/assets/regex-gist.png)
 
 ## Credits
 
