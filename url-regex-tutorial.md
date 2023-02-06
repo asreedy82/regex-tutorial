@@ -4,7 +4,7 @@ This tutorial will explain what regular expressions, or regex, are and how they 
 
 ## Summary
 
-The example we are using is a regext to match or find values that are URLs. For example, if you had long text and wanted to find all URLs that were in the text, this regex would do that. It also accounts for different ways URLs can be written, such as with `https://` in the beginning or without. We will explain the components of a regex with our example to help you, the reader, understand other regex examples and even create your own.
+The example we are using is a regex to match or find values that are URLs. For example, if you had long text and wanted to find all URLs that were in the text, this regex would do that. It also accounts for different ways URLs can be written, such as with `https://` in the beginning or without. We will explain the components of a regex with our example to help you, the reader, understand other regex examples and even create your own.
 
 ## Table of Contents
 
