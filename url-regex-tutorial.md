@@ -46,15 +46,16 @@ In our example, we see all quantifiers in use: `*`, `+`, `?`, and `{}`. The firs
 
 The next quantifier is the `+` in the next parenthesis, `([\da-z\.-]+)`. In this case, the pattern can occur 1 or more times. Basically, there needs to be at least 1 or more number, lowercase letter, `.`, or `-`.
 
-Next we see `{2,6}` immediately following the second bracket, `[a-z\.]`. This means there has to be at least 2 occurences of some combination of lowercase letters and/or a `.` but no more than 6. 
+Next we see `{2,6}` immediately following the second bracket, `[a-z\.]`. This means there has to be at least 2 occurences of some combination of lowercase letters and/or a `.` but no more than 6. The purpose of this quantifier is to account for various types of top-level domains such as `.com`, `.gov`, or `.edu`. Top-level domains, or TLD's, are usually at least 2 characters long but no more than 6.
 These would match:
-- `ab`
-- `www.`
-- `az.wer`
+- `tv`
+- `io`
+- `.biz`
 
 But these would not match:
-- `.`
-- `abcdef.`
+- `.` because it is less than 2 characters
+- `abcdef.` because it is longer than 6 characters
+- `1xyz` because it contains a number
 
 The next qualifiers we see are two `*` characters. The first one applies to the third bracket in the regex, `[\/\w \.-]`. In this case, 0 or more instances of combinations including `/`, any upper or lowercase letter, any number, any whitespace character, `_`, `.`, or `-`. This basically accounts for the directory of the URL, or the stuff that follows a `/`. The second `*` applies to the entire expression inside the parenthesis, meaning the pattern in the parenthesis can occur 0 or more times and still match.
 Examples of what can match:
